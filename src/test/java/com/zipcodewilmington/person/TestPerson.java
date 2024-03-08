@@ -68,6 +68,40 @@ public class TestPerson {
         Assert.assertEquals(expectedName, actualName);
     }
 
+    public void testConstructorWithEverything() {
+        // Given
+        String expectedName = "Leon";
+        Integer expectedAge = 55;
+        String expectedGender = "Male";
+        String expectedGeneration = "X";
+        String expectedHobby = "The Blues";
+        Integer expectedNetWorth = 1000000;
+        Boolean expectedIsMarried = false;
+
+
+        // When
+        Person person = new Person(expectedName, expectedAge, expectedGender,
+                expectedGeneration, expectedHobby, expectedNetWorth, expectedIsMarried);
+
+        // Then
+        Integer actualAge = person.getAge();
+        String actualName = person.getName();
+        String actualGender = person.getGender();
+        String actualGeneration = person.getGeneration();
+        String actualHobby = person.getHobby();
+        Integer actualNetWorth = person.getNetWorth();
+        Boolean actualIsMarried = person.getIsMarried();
+
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedGender, actualGender);
+        Assert.assertEquals(expectedGeneration, actualGeneration);
+        Assert.assertEquals(expectedHobby, actualHobby);
+        Assert.assertEquals(expectedNetWorth, actualNetWorth);
+        Assert.assertEquals(expectedIsMarried, actualIsMarried);
+
+    }
+
     @Test
     public void testSetName() {
         // Given

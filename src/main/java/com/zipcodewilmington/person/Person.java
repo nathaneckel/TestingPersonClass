@@ -10,7 +10,7 @@ public class Person {
     private String generation;
     private String hobby;
     private int netWorth;
-    private Boolean isMarried;
+    private boolean isMarried;
 
     public Person() {
         this.name = "";
@@ -39,6 +39,9 @@ public class Person {
         this.hobby = hobby;
         this.netWorth = netWorth;
         this.isMarried = isMarried;
+    }
+
+    public Person(String expectedName, Integer expectedAge) {
     }
 
     public void setName(String name) {
