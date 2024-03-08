@@ -6,11 +6,20 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private String gender;
+    private String generation;
+    private String hobby;
+    private int netWorth;
+    private Boolean isMarried;
 
-    //ha
     public Person() {
         this.name = "";
         this.age = Integer.MAX_VALUE;
+        this.gender = "";
+        this.generation = "";
+        this.hobby = "";
+        this.netWorth = Integer.MAX_VALUE;
+        this.isMarried = false;
     }
 
     public Person(int age) {
