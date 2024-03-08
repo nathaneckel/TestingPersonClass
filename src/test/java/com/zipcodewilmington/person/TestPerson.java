@@ -99,7 +99,6 @@ public class TestPerson {
         Assert.assertEquals(expectedHobby, actualHobby);
         Assert.assertEquals(expectedNetWorth, actualNetWorth);
         Assert.assertEquals(expectedIsMarried, actualIsMarried);
-
     }
 
     @Test
@@ -128,5 +127,72 @@ public class TestPerson {
         // Then
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
+    }
+
+    public void testConstructorWithGender() {
+        // Given
+        String expectedGender = "Male";
+
+        // When
+        Person person = new Person(expectedGender);
+
+        // Then
+        String actualGender = person.getGender();
+
+        Assert.assertEquals(expectedGender, actualGender);
+    }
+    public void testConstructorWithGeneration() {
+        // Given
+        String expectedGeneration = "X";
+
+        // When
+        Person person = new Person(expectedGeneration);
+
+        // Then
+        String actualGeneration = person.getGeneration();
+
+        Assert.assertEquals(expectedGeneration, actualGeneration);
+    }
+
+    public void testConstructorWithHobby() {
+        // Given
+        String expectedHobby = "The Blues";
+
+        // When
+        Person person = new Person(expectedHobby);
+
+        // Then
+        String actualHobby = person.getHobby();
+
+        Assert.assertEquals(expectedHobby, actualHobby);
+    }
+    public void testConstructorWithNetWorth() {
+        // Given
+        Integer expectedNetWorth = 1000000;
+        Boolean expectedIsMarried = false;
+
+
+        // When
+        Person person = new Person(expectedNetWorth);
+
+        // Then
+        Integer actualNetWorth = person.getNetWorth();
+
+        Assert.assertEquals(expectedNetWorth, actualNetWorth);
+
+    }
+    public void testConstructorWithIsMarried() {
+        // Given
+        Boolean expectedIsMarried = false;
+
+
+        // When
+        Person person = new Person(String.valueOf(expectedIsMarried));
+
+        // Then
+        Boolean actualIsMarried = person.getIsMarried();
+
+        Assert.assertEquals(expectedIsMarried, actualIsMarried);
+
     }
 }
